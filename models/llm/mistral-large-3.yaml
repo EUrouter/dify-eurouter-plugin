@@ -1,4 +1,4 @@
-model: mistral-large-latest
+model: mistral-large-3
 label:
   en_US: Mistral Large 3
 model_type: llm

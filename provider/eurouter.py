@@ -16,7 +16,7 @@ class EUrouterModelProvider(ModelProvider):
         try:
             model_instance = self.get_model_instance(ModelType.LLM)
             model_instance.validate_credentials(
-                model="mistral-large-latest",
+                model="mistral-large-3",
                 credentials=credentials,
             )
         except CredentialsValidateFailedError as ex:
