@@ -1,0 +1,41 @@
+version: 0.0.1
+type: plugin
+author: eurouter
+name: eurouter
+label:
+  en_US: EUrouter
+  zh_Hans: EUrouter
+  ja_JP: EUrouter
+  pt_BR: EUrouter
+description:
+  en_US: Access EU-hosted, GDPR-friendly AI models including DeepSeek R1, Kimi K2.5, Mistral Large 3, and MiniMax M2.5 through EUrouter's OpenAI-compatible API.
+  zh_Hans: "EUrouter \u63D0\u4F9B\u6B27\u76DF\u6258\u7BA1\u3001\u7B26\u5408 GDPR \u7684 AI \u6A21\u578B\uFF0C\u5305\u62EC DeepSeek R1\u3001Kimi K2.5\u3001Mistral Large 3 \u548C MiniMax M2.5\uFF0C\u901A\u8FC7 OpenAI \u517C\u5BB9\u7684 API \u8BBF\u95EE\u3002"
+  ja_JP: EUrouter\u306EOpenAI\u4E92\u63DBAPI\u3092\u901A\u3058\u3066\u3001DeepSeek R1\u3001Kimi K2.5\u3001Mistral Large 3\u3001MiniMax M2.5\u306A\u3069\u306EEU\u30DB\u30B9\u30C8\u3001GDPR\u6E96\u62E0\u306EAI\u30E2\u30C7\u30EB\u306B\u30A2\u30AF\u30BB\u30B9\u3067\u304D\u307E\u3059\u3002
+  pt_BR: "Acesse modelos de IA hospedados na UE e compat\xEDveis com GDPR, incluindo DeepSeek R1, Kimi K2.5, Mistral Large 3 e MiniMax M2.5 atrav\xE9s da API compat\xEDvel com OpenAI da EUrouter."
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+plugins:
+  models:
+    - provider/eurouter.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2026-04-02T12:00:00.000000+00:00
+privacy: PRIVACY.md
+verified: false
